@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
+
+        <ListView  Grid.Column="0" Grid.Row="0" x:Name="listView" Margin="0,0,376,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="Jméno" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Příjmení" DisplayMemberBinding="{Binding Surname}"/>
+                    <GridViewColumn Header="RČ" DisplayMemberBinding="{Binding PIN}"/>
+                    <GridViewColumn Header="Datum narození" DisplayMemberBinding="{Binding Birthdate}"/>
+                    <GridViewColumn Header="Pohlaví" DisplayMemberBinding="{Binding Gender}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="625,314,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="jmeno" HorizontalAlignment="Left" Height="23" Margin="570,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="saveButton" Content="Ulozit" Margin="625,258,56,134" Click="saveButton_Click" />
+        <TextBox x:Name="prijmeni" HorizontalAlignment="Left" Height="23" Margin="570,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="rodcislo" HorizontalAlignment="Left" Height="23" Margin="570,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="datumnar" HorizontalAlignment="Left" Height="23" Margin="570,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Jméno" HorizontalAlignment="Left" Margin="466,37,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Příjmení" HorizontalAlignment="Left" Margin="466,81,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Rodné číslo" HorizontalAlignment="Left" Margin="466,120,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Datum naroz." HorizontalAlignment="Left" Margin="466,164,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Pohlaví" HorizontalAlignment="Left" Margin="466,210,0,0" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="pohlavi" HorizontalAlignment="Left" Height="23" Margin="570,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="625,350,0,0" VerticalAlignment="Top" Width="111" Height="27" Click="Button_Click_1"/>
     </Grid>
 </Window>
